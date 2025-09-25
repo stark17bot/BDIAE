@@ -1,0 +1,22 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "1. Python 3.11+\r 2. Install deps:\r    ```bash\r    pip install -r backend/requirements.txt\r    ```\r 3. Create `.env` in `backend/`:\r    ```env\r    RPC_URL=\"https://rpc-mumbai.maticvigil.com\"\r    PRIVATE_KEY=\"your-private-key\"\r    PUBLIC_ADDRESS=\"0xyouraddress\"\r    CHAIN_ID=80001\r    INR_TOKEN_ADDRESS=\"0x...\"\r    AUCTION_ESCROW_ADDRESS=\"0x...\"\r    JWT_SECRET=\"supersecret\"\r    JWT_ALGORITHM=\"HS256\"\r    DATABASE_URL=\"sqlite:///./dev.db\"\r    ```",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "yellow:open": "node backend/yellow/sdk_channel.js open",
+    "yellow:deposit": "node backend/yellow/sdk_channel.js deposit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^17.2.2",
+    "ethers": "^6.15.0",
+    "@yellow/sdk": "^0.1.0"
+  }
+}
